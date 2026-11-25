@@ -4,9 +4,9 @@ from django.utils import timezone
 
 class WeatherData(models.Model):
     city = models.CharField(max_length=120, db_index=True)
-    temperature = models.FloatField()
-    humidity = models.IntegerField()
-    wind_speed = models.FloatField()
+    temperature = models.FloatField(help_text="Temperatura en grados Celsius")
+    humidity = models.FloatField(help_text="Humedad relativa en porcentaje")
+    wind_speed = models.FloatField(help_text="Velocidad del viento en m/s o km/h")
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
 
     class Meta:

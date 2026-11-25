@@ -48,3 +48,11 @@ MSYS_NO_PATHCONV=1 docker run --rm -v "${PWD}:/app" weather-backend-temp python 
         ├── urls.py
         ├── consumers.py     # WebSocket consumer (Django Channels)
         └── routing.py       # Rutas WebSocket
+
+echo "# clima-realtime-hub" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/johnfredy/clima-realtime-hub.git
+git push -u origin main
